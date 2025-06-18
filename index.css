@@ -4,6 +4,16 @@
     box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'Norse Bold';
+  src: url('./fonts/Norse-Bold (1).otf') format('truetype');
+}
+
+
+html, body {
+    overflow: hidden;
+}
+
 .container {
     display: flex;
 }
@@ -11,6 +21,7 @@
 .left-half {
     height: 100vh;
     width: 40vw;
+    position: relative;
 }
 
 .right-half {
@@ -23,30 +34,48 @@
     width: 60vw;
 }
 
+.overlay {
+    position: absolute;
+    top: 98px;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
 .right-half > div {
     flex: 1 0 auto;
     width: 100%;
     display: flex;
     justify-content: center;
-    /* align-items: center; */
     flex-direction: column;
     padding-left: 50px;
 }
 
 
+div.middle {
+    flex: 0 0 auto;
+    height: 240px;
+}
+
 .middle form {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 10px;
 }
 
 .right-half .top {
-    background-color: beige;
+    background-color: #F5F5DC;
     gap: 10px;
+    justify-content: flex-end;
+    padding-bottom: 50px;
 }
 
 .right-half .bottom {
-    background-color: beige
+    background-color: #F5F5DC;
+    justify-content: flex-start;
+    padding-top: 30px;
 }
 
 .data {
@@ -61,8 +90,6 @@
     /* flex-direction: column; */
 }
 
-
-
 img {
     width: 100%;
     height: 100%;
@@ -74,6 +101,34 @@ input, label {
 }
 
 button {
-    width: 100px;
-    height: 30px;
+    width: 150px;
+    height: 40px;
+    background-color: #596D48;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+}
+
+input {
+    height: 22px;
+    width: 200px;
+    padding: 5px;
+    border-color: #E5E7EB;
+    border-radius: 5px;
+    border: rgba(0, 0, 0, 0.3) 1px solid;
+}
+
+
+#password:invalid {
+    border: 2px solid red;
+}
+
+#confirm-password:invalid {
+    border: 2px solid red;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid blue;
+    box-shadow: 1px 1px 5px rgba(0, 0, 255, 0.3);
 }

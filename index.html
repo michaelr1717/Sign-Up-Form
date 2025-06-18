@@ -13,9 +13,9 @@
        <div class="container">
         <div class="left-half">
             <img src="./images/halie-west-bTzpau9mKT4-unsplash.jpg" alt="image of forest">
-            <footer>
-                <p>© 2025 Sign Up Form</p>
-            </footer>
+            <div class="overlay">
+                <img src="./images/Adobe Express - file.png" alt="image of eagle logo">
+            </div>
         </div>
         <div class="right-half">
             <div class="top">
@@ -23,7 +23,7 @@
                 <p>If so create your account to join the fun!</p>
             </div>
             <div class="middle">
-                <form>
+                <form id="sign-up">
                    <h2>Let's Sign Up!</h2>
                    <div class="data">
                        <div>
@@ -57,14 +57,16 @@
                            </div>
                        </div>
                    </div>
-                   <button type="submit">Sign Up</button>
                 </form>
             </div>
             <div class="bottom">
+                <button type="submit" form="sign-up" id="form-button">Create Account</button>
+                <br>
                 <p>Already have an account? <a href="#">Log In</a></p>
-                <p>By signing up, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
             </div>
         </div>
        </div>
+
+    <script src="./index.js"></script>
 </body>
 </html>
